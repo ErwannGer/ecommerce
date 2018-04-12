@@ -97,9 +97,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $db['default'] = array(
    'dsn' => '',
    'hostname' => 'localhost',
-   'username' => 'baseblog',
+   'username' => 'root ',
    'password' => '',
-   'database' => 'baseBlog',
+   'database' => 'ecommerce',
    'dbdriver' => 'mysqli',
    'dbprefix' => '',
    'pconnect' => FALSE,
