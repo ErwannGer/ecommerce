@@ -1,0 +1,15 @@
+<html>
+<head>
+  
+  <link rel="stylesheet" type="text/css" href= "{{css_url('style')}} "/>
+</head>
+  <body>
+    {% block body %}
+      <h2>{{ TitreDeLaPage |e }}</h2>
+      {% for uneFormation in lesformations %}
+        <h3><a href="VoirUneFormation/{{ uneFormation.idformation |e}}"> {{ uneFormation.libelle |e }}</a></h3>
+      {% endfor %}
+      <p>Pour avoir afficher le détail d'une formation, cliquer sur son titre</p>
+    {% endblock %}
+   </body>
+</html>

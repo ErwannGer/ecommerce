@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href= "{{css_url('style')}} "/>
+</head>
+  <body>
+    {% block body %}
+    <div class="symfony-content">
+      {% block content %}
+      <!-- inserer le include une seule fois et il permet d'inserer le contenu de la vue liée --><!-- le extends dans EnTete.twig permet la liaison des vues -->
+      {% endblock %}
+      {% block menu %}
+      {% endblock %}
+    </div>
+    {% endblock %}
+   </body>
+</html>

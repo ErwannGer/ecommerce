@@ -1,0 +1,13 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href= "{{css_url('style')}} "/>
+</head>
+  <body>
+    {% block body %}
+    <h2>{{uneFormation.libelle |e}}</h2>
+    {{uneFormation.description |e}}
+    <p><img src="{{uneFormation.image |e}}"/><p>
+    <p><a href ='{{site_url("Exos/listerLesFormationsAvecPagination")}}'>Retour à la liste des formations</a></p>
+    {% endblock %}
+  </body>
+</html>

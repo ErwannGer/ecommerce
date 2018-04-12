@@ -1,0 +1,23 @@
+<html>
+<body>
+{{ lambda|e }}
+<table border="1">
+	<tr>
+		<td>Id</td>
+		<td>Login</td>
+		<td>Role</td>
+	</tr>
+	{% for user in users %}
+		<tr>
+			<td>{{ user.id|e }}</td>
+			<td>{{ user.login|e }}</td>
+			<td>{{ user.role|e }}</td>
+		</tr>
+	{% else %}
+		<tr>
+			<td>Aucun utilisateur</td>
+		</tr>
+	{% endfor %}
+</table>
+</body>
+</html>
