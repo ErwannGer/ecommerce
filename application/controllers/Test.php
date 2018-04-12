@@ -1,9 +1,9 @@
 <?php
-class Test extends CI_Controller
-{
+    class test extends CI_Controller
+    {
 
-public function bonjourSimple()
-{
-$this->load->view('test/bonjourSimple'); // appel de la vue... pas d'affichage dans le controleur
-}
-}
+        public function bonjour()
+        {
+        $this->load->view('test/bonjour');
+        }
+    }
