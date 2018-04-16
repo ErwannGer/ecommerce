@@ -1,4 +1,6 @@
-<html
+<?php
+class Administrateur extends CI_Controller
+{
    public function ajouterUnArticleHTML5()
     {
         $this->load->helper('form');
@@ -18,8 +20,8 @@
         else
         {
             $this->load->view('templates/Entete')
-            $this->load->view('administrateur/ajouterUnArtileHTML5', $DonneesInjectees);
+            $this->load->view('administrateur/ajouterUnArticleHTML5', $DonneesInjectees);
             $this->load->view('templates/PiedDePage');
         }
     }
-</html>
+}
