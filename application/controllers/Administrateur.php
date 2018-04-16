@@ -1,4 +1,5 @@
-    public function ajouterUnArticleHTML5()
+<html
+   public function ajouterUnArticleHTML5()
     {
         $this->load->helper('form');
         $DonneesInjectees['TitreDeLaPage']='Ajouter un article';
@@ -21,3 +22,4 @@
             $this->load->view('templates/PiedDePage');
         }
     }
+</html>
