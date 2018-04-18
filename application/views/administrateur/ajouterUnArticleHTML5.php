@@ -13,7 +13,7 @@ echo form_textearea('txtTexte', '', array('required'=>'required')).'<BR>';
 echo form_label('Nom du fichier Image : ', 'lblNomFichierImage');
 echo form_input('txtNomFichierImage', '', array('pattern'=>'^[a-zA-Z][a-zA-Z0-9]*','title'=>'Un nom de fichier doit commencer par une lettre', 'required'=>'required')).'<BR>';
 
-echo form_submit('boutonjouter', 'Ajouter un article').'<BR>';
+echo form_submit('boutonAjouter', 'Ajouter un article').'<BR>';
 echo form_close();
 
 ?>
