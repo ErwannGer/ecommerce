@@ -58,10 +58,7 @@
   </div>
 </nav>
 
- <head>
-   <title>Blog simple</title>
- </head>
- <body>
+
  
  <?php if(!is_null($this->session->identifiant)) : ?>
    <?php echo 'Utilisateur connecté : <B>'.$this->session->identifiant.'</B>&nbsp;&nbsp;';?>
