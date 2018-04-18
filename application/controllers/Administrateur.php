@@ -19,7 +19,7 @@ class Administrateur extends CI_Controller
         }
         else
         {
-            $this->load->view('templates/Entete')
+            $this->load->view('templates/Entete');
             $this->load->view('administrateur/ajouterUnArticleHTML5', $DonneesInjectees);
             $this->load->view('templates/PiedDePage');
         }
