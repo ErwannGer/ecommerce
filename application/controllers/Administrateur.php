@@ -8,9 +8,16 @@ class Administrateur extends CI_Controller {
       if ($this->input->post('boutonAjouter'))
       {
         $donneesAInserer = array(
-          'cTitre' => $this->input->post('txtTitre'),
-          'cTexte' => $this->input->post('txtTexte'),
-          'cNomFichierImage' => $this->input->post('txtNomFichierImage')
+          'NOCATEGORIE' => $this->input->post('txtNoCategorie'),
+          'NOMARQUE' => $this->input->post('txtNoMarque'),
+          'LIBELLE' => $this->input->post('txtLibelle'),
+          'DETAIL' => $this->input->post('txtDetail'),
+          'PRIXHT' => $this->input->post('txtPrixHT'),
+          'TAUXTVA' => $this->input->post('txtTauxTVA'),
+          'NOMIMAGE' => $this->input->post('txtNomImage'),
+          'QUANTITEENSTOCK' => $this->input->post('txtQuantiteEnStock'),
+          'DATEAJOUT' => $this->input->post('txtDateAjout'),
+          'DISPONIBLE' => $this->input->post('txtDisponible')
         );
         $this->ModeleArticle->insererUnArticle($donneesAInserer);
         $this->load->helper('url');

@@ -22,7 +22,7 @@ echo form_input('txtPrixHT', '', array('[0-9]*', 'required' => 'required', 'titl
 echo form_label("Taux TVA du produit : ", 'lblTauxTVA');
 echo form_input('txtTauxTVA', '', array('[0-9]*', 'required' => 'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
 
-echo form_label("Nom du fichier image du produit : ", 'lblNomimage');
+echo form_label("Nom du fichier image du produit : ", 'lblNomImage');
 echo form_input('txtNomImage', '', array('required' => 'required')).'<BR>';
 
 echo form_label("Quantité en stock du produit : ", 'lblQuantiteEnStock');
