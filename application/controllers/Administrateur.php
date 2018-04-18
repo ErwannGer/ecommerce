@@ -13,7 +13,7 @@ class Administrateur extends CI_Controller
                 'cTexte' => $this->input->post('txtTexte'),
                 'cNomFichierImage' => $this->input->post('txtNomFichierImage')
             );
-            $this->ModelArticle->insererUnArticle($donneesAInserer);
+            $this->ModeleArticle->insererUnArticle($donneesAInserer);
             $this->load->helper('url');
             $this->load->view('administrateur/insertionReussie');
         }
