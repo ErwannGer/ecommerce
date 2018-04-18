@@ -38,5 +38,3 @@ echo form_submit('boutonAjouter', 'Ajouter un article').'<BR>';
 echo form_close();
  
 ?>
-
-//form_textarea
