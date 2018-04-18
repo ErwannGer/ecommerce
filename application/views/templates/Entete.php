@@ -41,7 +41,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">https://cdn-media.rtl.fr/cache/p8Z1X3cuBS2kWEqOdHifLA/880v587-0/online/image/2017/0331/7787896201_le-masque-insecte-d-une-grenouille.jpg</a>
+      <a class="navbar-brand" href="#">Logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
