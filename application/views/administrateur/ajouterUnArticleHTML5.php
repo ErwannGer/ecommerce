@@ -4,16 +4,39 @@
  
 echo form_open('administrateur/ajouterUnArticleHTML5');
  
-echo form_label("Titre de l'article : ", 'lbltTitre');
-echo form_input('txtTitre','',array('pattern' =>'[a-zA-Z]*','required'=>'required', 'title'=>'Saisir des lettres uniquement')).'<BR>';
+echo form_label("Numéro de catégorie : ", 'lblNoCategorie');
+echo form_input('txtNoCategorie','', array('pattern' => '[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
  
-echo form_label("Texte de l'article : ", 'lblTexte');
-echo form_textarea('txtTexte', '',array('required'=>'required')).'<BR>';
+echo form_label("Numéro de marque : ", 'lblMarque');
+echo form_input('txtMarque', '', array('pattern' => '[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
  
-echo form_label('Nom du fichier Image : ','lblNomFichierImage');
-echo form_input('txtNomFichierImage', '',array('pattern'=>'^[a-zA-Z][a-zA-Z0-9]*','title'=>'Un nom de fichier doit commencer par une lettre', 'required'=>'required')).'<BR>';
- 
+echo form_label("Libéllé du produit : ", 'lblLibelle');
+echo form_input('txtLabelle', '', array('required' => 'required')).'<BR>';
+
+echo form_label("Détail du produit : ", 'lblDetail');
+echo form_textarea('txtDetail', '', array('required' => 'required')).'<BR>';
+
+echo form_label("Prix HT du produit : ", 'lblPrixHT');
+echo form_input('txtPrixHT', '', array('[0-9]*', 'required' => 'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
+
+echo form_label("Taux TVA du produit : ", 'lblTauxTVA');
+echo form_input('txtTauxTVA', '', array('[0-9]*', 'required' => 'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
+
+echo form_label("Nom du fichier image du produit : ", 'lblNomimage');
+echo form_input('txtNomImage', '', array('required' => 'required')).'<BR>';
+
+echo form_label("Quantité en stock du produit : ", 'lblQuantiteEnStock');
+echo form_input('txtQuantiteEnStock', '', array('[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
+
+echo form_label("Date d'ajout du produit : ", 'lblDateAjout');
+echo form_input('txtDateAjout', '', array('required' => 'required')).'<BR>';
+
+echo form_label("Nombre disponible de produit : ", 'lblDisponible');
+echo form_input('txtDisponible', '', array('[0-9]*', 'required' => 'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
+
 echo form_submit('boutonAjouter', 'Ajouter un article').'<BR>';
 echo form_close();
  
 ?>
+
+//form_textarea
