@@ -7,8 +7,9 @@ class Administrateur extends CI_Controller {
       $DonneesInjectees['TitreDeLaPage'] = 'Ajouter un article';
              
       if ($this->input->post('boutonAjouter'))
-      {
+      { 
         $donneesAInserer = array(
+          'NOPRODUIT' => $this->input->post('txtNoProduit'),
           'NOCATEGORIE' => $this->input->post('txtNoCategorie'),
           'NOMARQUE' => $this->input->post('txtNoMarque'),
           'LIBELLE' => $this->input->post('txtLibelle'),
