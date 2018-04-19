@@ -1,7 +1,11 @@
 <?php
 class ModeleArticle extends CI_Model {
-    public function insererUnArticle($DonneesAInserer)
+  public function __construct()
+  {
+    $this->load->database();
+  }
+    public function insererUnArticle($pDonneesAInserer)
     {
-      return $this->db->insert('produit', $DonneesAInserer);
+      return $this->db->insert('produit', $pDonneesAInserer);
     }
 }
