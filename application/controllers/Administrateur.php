@@ -3,6 +3,7 @@ class Administrateur extends CI_Controller {
     public function ajouterUnArticleHTML5()
     {
       $this->load->helper('form');
+      $this->load->library('form_validation');
       $DonneesInjectees['TitreDeLaPage'] = 'Ajouter un article';
              
       if ($this->input->post('boutonAjouter'))
