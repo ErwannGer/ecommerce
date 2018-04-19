@@ -20,7 +20,7 @@ class Administrateur extends CI_Controller {
           'DATEAJOUT' => $this->input->post('txtDateAjout'),
           'DISPONIBLE' => $this->input->post('txtDisponible')
         );
-        $this->ModeleArticle->insererUnArticle($donneesAInserer);
+        $this->ModeleArticle->insererUnArticle($pDonneesAInserer);
         $this->load->helper('url');
         $this->load->view('administrateur/insertionReussie');
       }
