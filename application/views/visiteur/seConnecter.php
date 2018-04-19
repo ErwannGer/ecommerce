@@ -4,8 +4,8 @@ echo validation_errors();
 
 echo form_open('visiteur/seconnecter');
 
-echo form_label('Identifiant','txtIdentifiant');
-echo form_input('txtIdentifiant', set_value('txtIdentifiant'));
+echo form_label('Identifiant','txtEmail');
+echo form_input('txtEmail', set_value('txtEmail'));
  
 echo form_label('Mot de passe','txtMotDePasse');
 echo form_password('txtMotDePasse', set_value('txtMotDePasse'));

@@ -28,7 +28,7 @@
        
           $DonneesInjectees['TitreDeLaPage'] = 'Se connecter';
        
-          $this->form_validation->set_rules('txtIdentifiant', 'Identifiant', 'required');
+          $this->form_validation->set_rules('txtEmail', 'Identifiant', 'required');
           $this->form_validation->set_rules('txtMotDePasse', 'Mot de passe', 'required');
        
           if ($this->form_validation->run() === FALSE)
