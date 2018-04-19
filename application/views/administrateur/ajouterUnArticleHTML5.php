@@ -10,11 +10,11 @@ echo form_input('txtNoProduit','', array('pattern' => '[0-9]*', 'required'=>'req
 echo form_label("Numéro de catégorie : ", 'lblNoCategorie');
 echo form_input('txtNoCategorie','', array('pattern' => '[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
  
-echo form_label("Numéro de marque : ", 'lblMarque');
-echo form_input('txtMarque', '', array('pattern' => '[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
+echo form_label("Numéro de marque : ", 'lblNoMarque');
+echo form_input('txtNoMarque', '', array('pattern' => '[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
  
 echo form_label("Libéllé du produit : ", 'lblLibelle');
-echo form_input('txtLabelle', '', array('required' => 'required')).'<BR>';
+echo form_input('txtLibelle', '', array('required' => 'required')).'<BR>';
 
 echo form_label("Détail du produit : ", 'lblDetail');
 echo form_textarea('txtDetail', '', array('required' => 'required')).'<BR>';

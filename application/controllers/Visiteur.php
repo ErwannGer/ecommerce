@@ -30,7 +30,7 @@
        
           $this->form_validation->set_rules('txtEmail', 'Identifiant', 'required');
           $this->form_validation->set_rules('txtMotDePasse', 'Mot de passe', 'required');
-       
+          
           if ($this->form_validation->run() === FALSE)
           {
 
@@ -49,8 +49,8 @@
             if (!($UtilisateurRetourne == null))
             { 
                 $this->load->library('session');
-                $this->session->identifiant = $UtilisateurRetourne->EMAIL;
-       
+                $this->session->identifiant = $UtilisateurRetourne->PRENOM;
+
                 $DonneesInjectees['Identifiant'] = $Utilisateur['EMAIL'];
                 $this->load->view('templates/Entete');
                 $this->load->view('visiteur/connexionReussie', $DonneesInjectees);

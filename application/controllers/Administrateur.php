@@ -6,7 +6,7 @@ class Administrateur extends CI_Controller {
     parent::__construct();
     $this->load->model('ModeleArticle');
     $this->load->library('session');
-    if ($this->session->statut==0)
+    if ($this->session->EMAIL=='pigeaon.philipe@outlook.fr')
     {
       $this->load->helper('url');
       redirect('/visiteur/seConnecter');
