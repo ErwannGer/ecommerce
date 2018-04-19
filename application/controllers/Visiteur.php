@@ -35,24 +35,23 @@
           {
 
             $this->load->view('templates/Entete');  
-            $this->load->view('visiteur/seConnecter', $DonneesInjectees); // on renvoie le formulaire  
+            $this->load->view('visiteur/seConnecter', $DonneesInjectees);
             $this->load->view('templates/PiedDePage');
           }
           else
           {
             $Utilisateur = array(
-                '' => $this->input->post('txtIdentifiant'),
-                '' => $this->input->post('txtMotDePasse'),
+                'EMAIL' => $this->input->post('txtEmail'),
+                'MOTDEPASSE' => $this->input->post('txtMotDePasse'),
             );
        
             $UtilisateurRetourne = $this->ModeleUtilisateur->retournerUtilisateur($Utilisateur);
             if (!($UtilisateurRetourne == null))
             { 
                 $this->load->library('session');
-                $this->session->identifiant = $UtilisateurRetourne->cIdentifiant;
-                $this->session->statut = $UtilisateurRetourne->cStatut;
+                $this->session->identifiant = $UtilisateurRetourne->EMAIL;
        
-                $DonneesInjectees['Identifiant'] = $Utilisateur['cIdentifiant'];
+                $DonneesInjectees['Identifiant'] = $Utilisateur['EMAIL'];
                 $this->load->view('templates/Entete');
                 $this->load->view('visiteur/connexionReussie', $DonneesInjectees);
                 $this->load->view('templates/PiedDePage');
