@@ -41,8 +41,8 @@
           else
           {
             $Utilisateur = array(
-                'cIdentifiant' => $this->input->post('txtIdentifiant'),
-                'cMotDePasse' => $this->input->post('txtMotDePasse'),
+                '' => $this->input->post('txtIdentifiant'),
+                '' => $this->input->post('txtMotDePasse'),
             );
        
             $UtilisateurRetourne = $this->ModeleUtilisateur->retournerUtilisateur($Utilisateur);
