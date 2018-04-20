@@ -50,11 +50,11 @@
             { 
                 $this->load->library('session');
                 $this->session->identifiant = $UtilisateurRetourne->PRENOM;
-
-                $DonneesInjectees['Identifiant'] = $Utilisateur['EMAIL'];
-                $this->load->view('templates/Entete');
-                $this->load->view('visiteur/connexionReussie', $DonneesInjectees);
-                $this->load->view('templates/PiedDePage');
+            
+                    $DonneesInjectees['Identifiant'] = $Utilisateur['EMAIL'];
+                    $this->load->view('templates/Entete');
+                    $this->load->view('visiteur/connexionReussie', $DonneesInjectees);
+                    $this->load->view('templates/PiedDePage');
             }
             else
             {

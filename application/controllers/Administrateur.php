@@ -20,7 +20,6 @@ class Administrateur extends CI_Controller {
       $this->load->library('form_validation');
       $DonneesInjectees['TitreDeLaPage'] = 'Ajouter un article';
              
-      $this->form_validation->set_rules('txtNoProduit', 'NoProduit', 'required');
       $this->form_validation->set_rules('txtNoCategorie', 'NoCategorie', 'required');
       $this->form_validation->set_rules('txtNoMarque', 'NoMarque', 'required');
       $this->form_validation->set_rules('txtLibelle', 'Libelle', 'required');
@@ -35,7 +34,6 @@ class Administrateur extends CI_Controller {
       if($this->input->post('boutonAjouter'))
       { 
         $donneesAInserer = array(
-          'NOPRODUIT' => $this->input->post('txtNoProduit'),
           'NOCATEGORIE' => $this->input->post('txtNoCategorie'),
           'NOMARQUE' => $this->input->post('txtNoMarque'),
           'LIBELLE' => $this->input->post('txtLibelle'),

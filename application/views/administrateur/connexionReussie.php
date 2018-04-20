@@ -3,4 +3,4 @@
 
 if($this->session->EMAIL=='pigeaon.philipe@outlook.fr' )
 ?>
-<p><a href="<?php echo site_url('Visiteur/ListerLesArticles') ?>">Voir la liste des articles</a><p>
+<p><a href="<?php echo site_url('Administrateur/AjouterUnArticleHTML5') ?>">Ajouter un article dans la liste</a><p>
