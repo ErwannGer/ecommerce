@@ -65,4 +65,20 @@
        
            }
         }
+
+        public function voirUnArticle($noArticle = NULL)
+        {
+          $DonneesInjectees['unArticle'] = $this->ModeleArticle->retournerArticles($noArticle);
+        
+          if (empty($DonneesInjectees['unArticle']))
+          {      
+              show_404();        
+          }               
+        
+          $DonneesInjectees['TitreDeLaPage'] = $DonneesInjectees['unArticle']['LIBELLE'];        
+      
+          $this->load->view('templates/Entete');       
+          $this->load->view('visiteur/VoirUnArticle', $DonneesInjectees);       
+          $this->load->view('templates/PiedDePage');       
+        }
        }
