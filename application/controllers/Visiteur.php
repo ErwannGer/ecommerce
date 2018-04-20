@@ -53,7 +53,7 @@
             
                     $DonneesInjectees['Identifiant'] = $Utilisateur['EMAIL'];
                     $this->load->view('templates/Entete');
-                    $this->load->view('administrateur/connexionReussie', $DonneesInjectees);
+                    $this->load->view('visiteur/connexionReussie', $DonneesInjectees);
                     $this->load->view('templates/PiedDePage');
             }
             else

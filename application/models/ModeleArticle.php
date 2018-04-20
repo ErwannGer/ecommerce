@@ -11,14 +11,14 @@ class ModeleArticle extends CI_Model {
     }
   
      
-      public function retournerArticles($pNoArticle = FALSE)
+      public function retournerArticles($pNoProduit = FALSE)
       {
-        if ($pNoArticle === FALSE)
+        if ($pNoProduit === FALSE)
         {
           $requete = $this->db->get('produit');
           return $requete->result_array();
         }
-          $requete = $this->db->get_where('produit', array('NOPRODUIT' => $pNoArticle));
+          $requete = $this->db->get_where('produit', array('NOPRODUIT' => $pNoProduit));
           return $requete->row_array();
       }
     }
