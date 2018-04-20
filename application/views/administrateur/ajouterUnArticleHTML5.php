@@ -4,6 +4,9 @@
  
 echo form_open('administrateur/ajouterUnArticleHTML5');
  
+echo form_label("Numéro du produit: ", 'lblNoProduit');
+echo form_input('txtNoProduit','', array('pattern' => '[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
+ 
 echo form_label("Numéro de catégorie : ", 'lblNoCategorie');
 echo form_input('txtNoCategorie','', array('pattern' => '[0-9]*', 'required'=>'required', 'title' => 'Saisir des nombres uniquement')).'<BR>';
  
