@@ -14,3 +14,6 @@ echo form_password('txtMotDePasse', set_value('txtMotDePasse'));
 echo form_submit('submit', 'Se connecter');
 echo form_close();
 ?>
+<h2>Créer un compte</h2>
+
+<p><a href="<?php echo site_url('Visiteur/creerUnCompte') ?>"</a><p>

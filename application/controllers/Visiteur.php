@@ -86,4 +86,26 @@
        
         $this->load->view('visiteur/seDeconnecter');
         }
+        public function creerUnCompte()
+        {
+            $this->load->helper('form');
+            $DonneesInjectees['TitreDeLaPage'] = 'Créer un compte';
+ 
+            if ($this->input->post('boutonAjouter'))
+            {
+                $donneesAInserer = array(
+                    'NOM' => $this->input->post('txtNom '),
+                    'PRENOM' => $this->input->post('txtPrenom'),
+                    'ADRESSE' => $this->input->post('txtAdresse'),
+                    'VILLE' => $this->input->post('txtVille'),
+                    'CODEPOSTAL' => $this->input->post('txtCodePostal'),
+                    'EMAIL' => $this->input->post('txtAmail'),
+                    'MOTDEPASSE' => $this->input->post('txtMotDePasse'),
+                );
+                $this->ModeleClient->insererUnClient($donneesAInserer);
+                $this->load->helper('url');
+                $this->load->view('visiteur/creationReussie');
+                  
+            }
+        }
        }
