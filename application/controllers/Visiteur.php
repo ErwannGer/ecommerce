@@ -13,7 +13,7 @@
            
         public function listerLesArticles()
         {
-            $DonneesInjectees['produit'] = $this->ModeleArticle->retournerArticles();
+            $DonneesInjectees['lesArticles'] = $this->ModeleArticle->retournerArticles();
             $DonneesInjectees['TitreDeLaPage'] = 'Tous les articles';
            
             $this->load->view('templates/Entete');
