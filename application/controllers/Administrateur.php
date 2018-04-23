@@ -11,7 +11,7 @@ class Administrateur extends CI_Controller {
       redirect('/visiteur/seConnecter');
     }
   }
-  public functionajouterUnArticleHTML5()
+  public function ajouterUnArticleHTML5()
   {
     $this->load->helper('form');
     $DonneesInjectees['TitreDeLaPage'] = 'Ajouter un article';
