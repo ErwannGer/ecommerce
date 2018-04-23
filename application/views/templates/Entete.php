@@ -55,9 +55,7 @@
         <?php if (!is_null($this->session->identifiant)) : ?> 
         <li><a href="<?php echo site_url('visiteur/seDeconnecter') ?>"><span class="glyphicon glyphicon-log-in"></span>  Se déconnecter</a></li>
         <?php else : ?>
-
         <li><a href="<?php echo site_url('visiteur/seConnecter') ?>"></span>  Se connecter</a></li>
-
         <?php endif; ?>
       </ul>
     </div>
