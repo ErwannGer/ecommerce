@@ -76,7 +76,7 @@
           }               
         
           $DonneesInjectees['TitreDeLaPage'] = $DonneesInjectees['unArticle']['LIBELLE'];        
-      
+
           $this->load->view('templates/Entete');       
           $this->load->view('visiteur/VoirUnArticle', $DonneesInjectees);       
           $this->load->view('templates/PiedDePage');       

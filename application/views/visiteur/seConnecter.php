@@ -1,5 +1,6 @@
 <h2><?php echo $TitreDeLaPage ?></h2>
 <?php
+
 echo validation_errors();
 
 echo form_open('visiteur/seconnecter');
