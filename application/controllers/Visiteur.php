@@ -83,5 +83,7 @@
         }
         public function seDeConnecter() {
             $this->session->sess_destroy();
-        } 
+       
+        $this->load->view('visiteur/seDeconnecter');
+        }
        }
