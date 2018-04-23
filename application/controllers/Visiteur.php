@@ -81,4 +81,7 @@
           $this->load->view('visiteur/VoirUnArticle', $DonneesInjectees);       
           $this->load->view('templates/PiedDePage');       
         }
+        public function seDeConnecter() {
+            $this->session->sess_destroy();
+        } 
        }
