@@ -4,8 +4,9 @@ class Administrateur extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('ModeleArticle');
+
     $this->load->library('session');
-    if ($this->session->PROFIL=='Admin')
+    if ($this->session->statut=='0')
     {
       $this->load->helper('url');
       redirect('/visiteur/seConnecter');
