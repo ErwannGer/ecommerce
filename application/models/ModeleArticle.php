@@ -21,4 +21,17 @@ class ModeleArticle extends CI_Model {
           $requete = $this->db->get_where('produit', array('NOPRODUIT' => $pNoProduit));
           return $requete->row_array();
       }
+      public function retournerDernierArticle($pDerniereDate)
+     {
+       $requete =$this->db->query("SELECT * FROM produit where DATEAJOUT = '".$pDerniereDate."'");
+       return $requete->row_array();
+     }
+     public function retournerDerniereDate()
+     {
+       $requete =$this->db->query("SELECT MAX(DATEAJOUT) FROM produit");
+       foreach ($requete->result_array() as $ligne){
+         $jeuDEnregistrements = $ligne;
+       }
+       return $jeuDEnregistrements;
+     }
     }

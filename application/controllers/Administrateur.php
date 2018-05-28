@@ -5,10 +5,10 @@ class Administrateur extends CI_Controller {
     parent::__construct();
     $this->load->model('ModeleArticle');
 
+    $this->load->helper('url');
     $this->load->library('session');
-    if ($this->session->statut=='0')
+    if ($this->session->statut==('Client') OR $this->session->statut==(NULL))
     {
-      $this->load->helper('url');
       redirect('/visiteur/seConnecter');
     }
   }

@@ -108,4 +108,14 @@
                   
             }
         }
-       }
+        public function accueil()
+        {
+            $DerniereDate = $this->ModeleArticle->retournerDerniereDate();
+            $DonneesInjectees['lesArticles'] = $this->ModeleArticle->retournerDernierArticle($DerniereDate['MAX(DATEAJOUT)']);
+            $DonneesInjectees['TitreDeLaPage'] = 'Acceuil';
+           
+            $this->load->view('templates/Entete');
+            $this->load->view('visiteur/accueil', $DonneesInjectees);
+            $this->load->view('templates/PiedDePage');
+        } 
+          }

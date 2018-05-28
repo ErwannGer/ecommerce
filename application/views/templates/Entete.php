@@ -46,10 +46,13 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Ce que je veux</a></li>
-        <li><a href="#">Ajouté?</a></li>
+        <?php if (!is_null($this->session->identifiant)) : ?>
+       <?php echo 'Utilisateur connecté : <B>'.$this->session->identifiant.'</B>';?>
+       <?php if ($this->session->statut==('Admin')) { ?>
+        <li><a href="<?php echo site_url('administrateur/ajouterUnArticle') ?>">Ajouter un article</a></li>
+       <?php } ?>
+       <?php endif; ?>
+        <li><a href="<?php echo site_url('visiteur/listerLesArticles') ?>">ListerP les Articles</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php if (!is_null($this->session->identifiant)) : ?> 
@@ -61,22 +64,3 @@
     </div>
   </div>
 </nav>
-
-
-<html>
-    <head>
-       <title>Blog simple</title>
-    </head>
-    <body>
-   
-    <?php if (!is_null($this->session->identifiant)) : ?>
-       <?php echo 'Utilisateur connecté : <B>'.$this->session->identifiant.'</B>&nbsp;&nbsp;';?>
-       <a href="<?php echo site_url('visiteur/seDeconnecter') ?>">Se déconnecter</a>&nbsp;&nbsp;
-       <?php if ($this->session->statut==1) : ?>
-          <a href="<?php echo site_url('administrateur/ajouterUnArticle') ?>">Ajouter un article</a>&nbsp;&nbsp;
-       <?php endif; ?>
-    <?php else : ?>
-       <a href="<?php echo site_url('visiteur/seConnecter') ?>">Se Connecter</a>&nbsp;&nbsp;
-    <?php endif; ?>
-    <a href="<?php echo site_url('visiteur/listerLesArticles') ?>">Lister tous les Articles</a>&nbsp;&nbsp;
-    <a href="<?php echo site_url('visiteur/listerLesArticlesAvecPagination') ?>">Lister les Articles (par 3)</a>&nbsp;&nbsp;
