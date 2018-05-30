@@ -12,16 +12,16 @@
       <div class="item active">
         <img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
         <div class="carousel-caption">
-          <h3>Sell $</h3>
-          <p>Money Money.</p>
+          <h3>Baratte</h3>
+          <p>46.00 €</p>
         </div>      
       </div>
 
       <div class="item">
         <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
         <div class="carousel-caption">
-          <h3>More Sell $</h3>
-          <p>Lorem ipsum...</p>
+          <h3>Dyonisos</h3>
+          <p>46.00 €</p>
         </div>      
       </div>
     </div>

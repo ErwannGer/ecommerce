@@ -2,5 +2,6 @@
 
 <?php foreach ($lesArticles as $unArticle):
      echo '<h3>'.anchor('visiteur/voirUnArticle/'. $unArticle['NOPRODUIT'], $unArticle['LIBELLE']).'</h3>';
-endforeach?>
+     echo '<h3>Prix HT : '.$unArticle['PRIXHT'].'</h3>';
+     endforeach?>
 
