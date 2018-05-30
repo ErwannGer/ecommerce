@@ -23,18 +23,14 @@ else {
     echo '<p>'.img($unArticle['NOMIMAGE']).'<p>'; 
     echo '<h3>Prix HT: '.$unArticle['PRIXHT'].'</h3>';
     echo '<h3>Quantité en stock: '.$unArticle['QUANTITEENSTOCK'].'</h3>';
-    if ($unArticle['DISPONIBLE'] == 0) {
-        echo 'Produit non disponible !';
-        echo '<br>';
-    }
-    else {
+    
         echo form_label('Quantité :  ','txtQuantite');
         echo form_input('txtQuantite', '', array('pattern' => '[0-9]*', 'required' => 'required'));
         echo form_hidden('slctNo', ''.$unArticle['NOPRODUIT'].'');
         echo form_submit('submit', 'Ajouter');
-        echo '<p>'.anchor('visiteur/listerLesArticlesAvecPagination','Retour à la liste des articles').'</p>';
+        echo '<p>'.anchor('visiteur/listerLesArticles','Retour à la liste des articles').'</p>';
         echo form_close();
     }
     
-}
+
 ?>

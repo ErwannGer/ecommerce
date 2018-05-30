@@ -18,5 +18,9 @@ public function retournerUtilisateur($pUtilisateur)
    $requete = $this->db->get_where('client',$pUtilisateur);
    return $requete->row();
 }
- 
+public function insererUnClient($pDonneesAInserer)
+{
+    return $this->db->insert('client', $pDonneesAInserer);
+}
+
 }
