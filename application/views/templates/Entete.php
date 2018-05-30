@@ -45,16 +45,17 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="<?php echo site_url('visiteur/accueil') ?>">Acceuil</a></li>
         <?php if (!is_null($this->session->identifiant)) : ?>
        <?php echo 'Utilisateur connecté : <B>'.$this->session->identifiant.'</B>';?>
        <?php if ($this->session->statut==('Admin')) { ?>
         <li><a href="<?php echo site_url('administrateur/ajouterUnArticle') ?>">Ajouter un article</a></li>
        <?php } ?>
        <?php endif; ?>
-        <li><a href="<?php echo site_url('visiteur/listerLesArticles') ?>">ListerP les Articles</a></li>
+        <li><a href="<?php echo site_url('visiteur/listerLesArticles') ?>">Articles</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+      <li><a href="<?php echo site_url('visiteur/afficherPanier') ?>">Panier</a></li>
         <?php if (!is_null($this->session->identifiant)) : ?> 
         <li><a href="<?php echo site_url('visiteur/seDeconnecter') ?>"><span class="glyphicon glyphicon-log-in"></span>  Se déconnecter</a></li>
         <?php else : ?>
